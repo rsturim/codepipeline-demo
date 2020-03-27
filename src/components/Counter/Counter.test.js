@@ -18,19 +18,17 @@ test("Counter component works properly", () => {
 
     expect(counterValueEl).toHaveTextContent("-1");
 
-    // fireEvent.click(minusTwoButtonEl);
+    fireEvent.click(minusTwoButtonEl);
 
-    // expect(counterValueEl).toHaveTextContent("-3");
+    expect(counterValueEl).toHaveTextContent("-3");
 
     fireEvent.click(plusOneButtonEl);
 
+    expect(counterValueEl).toHaveTextContent("-2");
+
+    fireEvent.click(plusTwoButtonEl);
+
     expect(counterValueEl).toHaveTextContent("0");
-
-    // expect(counterValueEl).toHaveTextContent("-2");
-
-    // fireEvent.click(plusTwoButtonEl);
-
-    // expect(counterValueEl).toHaveTextContent("0");
 
     fireEvent.click(plusOneButtonEl);
 
